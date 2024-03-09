@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: mywebapp
+  name: mywebapp
+  namespace: webapp
+spec:
+  containers:
+  - envFrom:
+    - configMapRef:
+        name: hostsql
+    - secretRef:
+        name: mypassword 
+    env: 
+    - name: DBPORT
+      value: "3306"
+    image: 168491602991.dkr.ecr.us-east-1.amazonaws.com/webapp-repo:v1
+    name: mywebapp
+    ports:
+    - containerPort: 8080
+      protocol: TCP
