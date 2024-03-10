@@ -30,4 +30,4 @@ spec:
           - name: DBPORT
             value: "3306"
           - name: DBHOST
-            value: "sqldb-service.sqldb.svc.cluster.local"
+            value: "database-service.sqldb.svc.cluster.local"
