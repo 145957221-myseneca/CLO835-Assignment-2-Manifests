@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: database-replica
+  name: database-replica-v1
   namespace: sqldb
   labels:
     app: mysql

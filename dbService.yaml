@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: sqldb-service
+  name: database-service
   namespace: sqldb
   labels:
     app: mysql

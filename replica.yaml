@@ -24,10 +24,10 @@ spec:
         ports:
         - containerPort: 8080
         envFrom:
-        - configMapRef:
-            name: hostsql
         - secretRef:
-            name: mypassword 
+            name: mypassword
         env: 
           - name: DBPORT
             value: "3306"
+          - name: DBHOST
+            value: "sqldb-service.sqldb.svc.cluster.local"
